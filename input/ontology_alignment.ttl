@@ -1,0 +1,32 @@
+@prefix beo: <https://w3id.org/beo#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix ifc: <https://w3id.org/ifc/IFC4X3_ADD2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <https://example.org/ns#> .
+@base <https://example.org/ns#> .
+
+<https://example.org/ns#> rdf:type owl:Ontology ;
+                            owl:imports 
+                                <https://w3c-lbd-cg.github.io/bot/bot.ttl> ,
+                                <https://cramonell.github.io/beo/actual/ontology.ttl> ,
+                                <https://cramonell.github.io/ifc/ifcowl/IFC4X3_ADD2/actual/ontology.ttl> .
+
+
+# Mappings between IFC, BEO, BOT ontologies and the custom ontology
+ifc:IfcSite rdfs:subClassOf bot:Site .
+ifc:IfcBuilding rdfs:subClassOf bot:Building .
+ifc:IfcBuildingStorey rdfs:subClassOf bot:Storey .
+ifc:IfcSpace rdfs:subClassOf bot:Space .
+ifc:IfcElement rdfs:subClassOf bot:Element .
+ifc:IfcMaterial rdfs:subClassOf ex:Material .
+# beo:Product rdfs:subClassOf bot:Element .
+ifc:IfcBuildingElement rdfs:subClassOf beo:BuiltElement .
+ifc:IfcDoor rdfs:subClassOf beo:Door . 
+ifc:IfcCurtainWall rdfs:subClassOf beo:CurtainWall .
+ifc:IfcPlate rdfs:subClassOf beo:Plate . 
+ifc:IfcRoof rdfs:subClassOf beo:Roof . 
+ifc:IfcSlab rdfs:subClassOf beo:Slab . 
+ifc:IfcWall rdfs:subClassOf beo:Wall . 
+ifc:IfcWindow rdfs:subClassOf beo:Window . 
