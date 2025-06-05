@@ -1,0 +1,97 @@
+
+bbl:C4_S4_2_P4_2_8_A4_50_SUB1
+    a sh:NodeShape ;
+    rdfs:label "Article 4.50(1)" ;
+    rdfs:comment """A closed space is in a fire compartment."""@en ;
+    rdfs:comment """Een besloten ruimte ligt in een brandcompartiment."""@nl ;
+    rdfs:seeAlso <https://wetten.overheid.nl/BWBR0041297/2024-08-01#Hoofdstuk4_Afdeling4.2_Paragraaf4.2.8_Artikel4.50_Lid1> ;
+        sh:target [
+            a sh:SPARQLTarget ;
+                sh:select """
+                    SELECT DISTINCT ?this WHERE {
+                    {  ?this a bot:Space . 
+                      ?this pset:Other ?pset . 
+                      ?pset props:Isenclosed ?prop . 
+                    }
+                }    
+                """ ;
+        ]     ;
+        sh:property bbl:C4_S4_2_P4_2_8_A4_50_SUB1_PROP1 . 
+
+bbl:C4_S4_2_P4_2_8_A4_50_SUB1_PROP1
+    a sh:PropertyShape ;
+    rdfs:label "Article 4.50(1)" ;
+    rdfs:comment """A closed space is in a fire compartment."""@en ;
+    rdfs:comment """Een besloten ruimte ligt in een brandcompartiment."""@nl ;
+    rdfs:seeAlso <https://wetten.overheid.nl/BWBR0041297/2024-08-01#Hoofdstuk4_Afdeling4.2_Paragraaf4.2.8_Artikel4.50_Lid1> ;
+    sh:path ex:locatedInCompartment ;
+    sh:class ex:FireCompartment ;
+    sh:minCount 1 .
+
+
+bbl:C4_S4_2_P4_2_8_A4_50_SUB3
+    a sh:NodeShape ;
+    rdfs:label "Article 4.50(3)" ;
+    rdfs:comment """A road tunnel tube with a length of more than 250 m is in a fire compartment."""@en ;
+    rdfs:comment """Een wegtunnelbuis met een lengte van meer dan 250 m ligt in een brandcompartiment."""@nl ;
+    rdfs:seeAlso <https://wetten.overheid.nl/BWBR0041297/2024-08-01#Hoofdstuk4_Afdeling4.2_Paragraaf4.2.8_Artikel4.50_Lid3> ;
+        sh:target [
+            a sh:SPARQLTarget ;
+                sh:select """
+                    SELECT DISTINCT ?this WHERE {
+                    {  ?this a ifc:IfcRoad . 
+                      ?this pset:Dimensions ?pset . 
+                      ?pset props:Length ?prop . 
+                      ?prop qudt:NumericValue ?num. 
+                      FILTER ( ?num > 250.0 ) 
+                    }
+                }    
+                """ ;
+        ]     ;
+        sh:property bbl:C4_S4_2_P4_2_8_A4_50_SUB3_PROP1 . 
+
+bbl:C4_S4_2_P4_2_8_A4_50_SUB3_PROP1
+    a sh:PropertyShape ;
+    rdfs:label "Article 4.50(3)" ;
+    rdfs:comment """A road tunnel tube with a length of more than 250 m is in a fire compartment."""@en ;
+    rdfs:comment """Een wegtunnelbuis met een lengte van meer dan 250 m ligt in een brandcompartiment."""@nl ;
+    rdfs:seeAlso <https://wetten.overheid.nl/BWBR0041297/2024-08-01#Hoofdstuk4_Afdeling4.2_Paragraaf4.2.8_Artikel4.50_Lid3> ;
+    sh:path ex:locatedInCompartment ;
+    sh:class ex:FireCompartment ;
+    sh:minCount 1 .
+
+
+bbl:C4_S4_2_P4_2_14_A4_92_SUB2
+    a sh:NodeShape ;
+    rdfs:label "Article 4.92(2)" ;
+    rdfs:comment """Contrary to the first sub-article, a door, a window, a frame or a structural component to be equated with that is a fire class D, determined according to NEN-EN 13501-1."""@en ;
+    rdfs:comment """In afwijking van het eerste lid voldoet een deur, een raam, een kozijn of een daaraan gelijk te stellen constructieonderdeel aan brandklasse D, bepaald volgens NEN-EN 13501-1."""@nl ;
+    rdfs:seeAlso <https://wetten.overheid.nl/BWBR0041297/2024-08-01#Hoofdstuk4_Afdeling4.2_Paragraaf4.2.14_Artikel4.92_Lid2> ;
+        sh:target [
+            a sh:SPARQLTarget ;
+                sh:select """
+                    SELECT DISTINCT ?this WHERE {
+                    {
+                        {  ?this a beo:Door . }
+                        UNION
+                        {  ?this a beo:Window . }
+                        UNION
+                        {  ?this a ex:Frame . }
+                        UNION
+                        {  ?this a ex:StructuralComponent . } 
+                    }
+                }    
+                """ ;
+        ]     ;
+        sh:property bbl:C4_S4_2_P4_2_14_A4_92_SUB2_PROP1 . 
+
+bbl:C4_S4_2_P4_2_14_A4_92_SUB2_PROP1
+    a sh:PropertyShape ;
+    rdfs:label "Article 4.92(2)" ;
+    rdfs:comment """Contrary to the first sub-article, a door, a window, a frame or a structural component to be equated with that is a fire class D, determined according to NEN-EN 13501-1."""@en ;
+    rdfs:comment """In afwijking van het eerste lid voldoet een deur, een raam, een kozijn of een daaraan gelijk te stellen constructieonderdeel aan brandklasse D, bepaald volgens NEN-EN 13501-1."""@nl ;
+    rdfs:seeAlso <https://wetten.overheid.nl/BWBR0041297/2024-08-01#Hoofdstuk4_Afdeling4.2_Paragraaf4.2.14_Artikel4.92_Lid2> ;
+    sh:path ( pset:Other props:Fireclass ) ;
+    sh:in ( "D"^^xsd:string "C"^^xsd:string "B"^^xsd:string "A2"^^xsd:string "A1"^^xsd:string ) ;
+    sh:minCount 1 .
+
