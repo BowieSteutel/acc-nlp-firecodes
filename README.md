@@ -63,7 +63,9 @@ This notebook classifies regulations and filters them based on their classificat
 	- `BBL_subset_final_big.csv` (automatically selected subset based on classifications)
 	- `BBL_subset_final_small.csv` (handpicked smaller subset for effective demonstration)
 
-**INCLUDE PROPOSED CLASSIFICATIONS?**
+**SEE PROPOSED CLASSIFICATIONS IN THESIS**
+
+
 
 ### 1C. Information Extraction & Parsing
 This notebook contains the core NLP engine of the pipeline, which can be used for converting regulations into a machine-readable format.
