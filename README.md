@@ -84,7 +84,7 @@ This notebook contains the core NLP engine of the pipeline, which can be used fo
 	- `regulatory_information_subset_small.json`
 
 ### 1D. Shapes Graph Generation
-This notebook converts the interpreted regulatory information from JSON dictionaries to SHACL shapes for validation. The notebook also demonstrates how the SHACL templates are defined and validates them using simple regulations and the building information from module 2, along with the compliance report function from module 3. 
+This notebook converts the interpreted regulatory information from JSON dictionaries to SHACL shapes for validation. The notebook also demonstrates how the SHACL templates are defined and validates them using simple regulations and the building information converted by module 2. 
 -   **Inputs**: 
 	- `regulatory_information_subset_small.json` (handpicked regulations) 
 	- `use_case_correct.ttl` (for template validation)
