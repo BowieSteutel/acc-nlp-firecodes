@@ -1,0 +1,89 @@
+@prefix bbl: <https://example.org/BBL#> .
+@prefix ex: <https://example.org/ns#> .
+@prefix inst: <https://linkedbuildingdata.net/ifc/resources20250531_181534/> .
+@prefix props: <https://w3id.org/props#> .
+@prefix pset: <https://example.org/pset#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sh:ValidationReport ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            rdfs:label "Article 4.50(1)" ;
+            rdfs:comment "A closed space is in a fire compartment."@en,
+                "Een besloten ruimte ligt in een brandcompartiment."@nl ;
+            rdfs:seeAlso <https://wetten.overheid.nl/BWBR0041297/2024-08-01#Hoofdstuk4_Afdeling4.2_Paragraaf4.2.8_Artikel4.50_Lid1> ;
+            sh:focusNode inst:Space_902 ;
+            sh:resultMessage "Less than 1 values on inst:Space_902->ex:locatedInCompartment" ;
+            sh:resultPath ex:locatedInCompartment ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape bbl:C4_S4_2_P4_2_8_A4_50_SUB1_PROP1 ],
+        [ a sh:ValidationResult ;
+            rdfs:label "Article 4.92(2)" ;
+            rdfs:comment "Contrary to the first sub-article, a door, a window, a frame or a structural component to be equated with that is a fire class D, determined according to NEN-EN 13501-1."@en,
+                "In afwijking van het eerste lid voldoet een deur, een raam, een kozijn of een daaraan gelijk te stellen constructieonderdeel aan brandklasse D, bepaald volgens NEN-EN 13501-1."@nl ;
+            rdfs:seeAlso <https://wetten.overheid.nl/BWBR0041297/2024-08-01#Hoofdstuk4_Afdeling4.2_Paragraaf4.2.14_Artikel4.92_Lid2> ;
+            sh:focusNode inst:Door_25604 ;
+            sh:resultMessage "Value Literal(\"E\", datatype=xsd:string) not in list ['Literal(\"A1\", datatype=xsd:string)', 'Literal(\"B\", datatype=xsd:string)', 'Literal(\"D\", datatype=xsd:string)', 'Literal(\"A2\", datatype=xsd:string)', 'Literal(\"C\", datatype=xsd:string)']" ;
+            sh:resultPath _:nb2ead76493784e328d29f95b7300f1deb4 ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:InConstraintComponent ;
+            sh:sourceShape bbl:C4_S4_2_P4_2_14_A4_92_SUB2_PROP1 ;
+            sh:value "E"^^xsd:string ],
+        [ a sh:ValidationResult ;
+            rdfs:label "Article 4.92(2)" ;
+            rdfs:comment "Contrary to the first sub-article, a door, a window, a frame or a structural component to be equated with that is a fire class D, determined according to NEN-EN 13501-1."@en,
+                "In afwijking van het eerste lid voldoet een deur, een raam, een kozijn of een daaraan gelijk te stellen constructieonderdeel aan brandklasse D, bepaald volgens NEN-EN 13501-1."@nl ;
+            rdfs:seeAlso <https://wetten.overheid.nl/BWBR0041297/2024-08-01#Hoofdstuk4_Afdeling4.2_Paragraaf4.2.14_Artikel4.92_Lid2> ;
+            sh:focusNode inst:Door_39702 ;
+            sh:resultMessage "Value Literal(\"E\", datatype=xsd:string) not in list ['Literal(\"A1\", datatype=xsd:string)', 'Literal(\"B\", datatype=xsd:string)', 'Literal(\"D\", datatype=xsd:string)', 'Literal(\"A2\", datatype=xsd:string)', 'Literal(\"C\", datatype=xsd:string)']" ;
+            sh:resultPath _:nb2ead76493784e328d29f95b7300f1deb4 ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:InConstraintComponent ;
+            sh:sourceShape bbl:C4_S4_2_P4_2_14_A4_92_SUB2_PROP1 ;
+            sh:value "E"^^xsd:string ],
+        [ a sh:ValidationResult ;
+            rdfs:label "Article 4.92(2)" ;
+            rdfs:comment "Contrary to the first sub-article, a door, a window, a frame or a structural component to be equated with that is a fire class D, determined according to NEN-EN 13501-1."@en,
+                "In afwijking van het eerste lid voldoet een deur, een raam, een kozijn of een daaraan gelijk te stellen constructieonderdeel aan brandklasse D, bepaald volgens NEN-EN 13501-1."@nl ;
+            rdfs:seeAlso <https://wetten.overheid.nl/BWBR0041297/2024-08-01#Hoofdstuk4_Afdeling4.2_Paragraaf4.2.14_Artikel4.92_Lid2> ;
+            sh:focusNode inst:Door_18263 ;
+            sh:resultMessage "Value Literal(\"E\", datatype=xsd:string) not in list ['Literal(\"A1\", datatype=xsd:string)', 'Literal(\"B\", datatype=xsd:string)', 'Literal(\"D\", datatype=xsd:string)', 'Literal(\"A2\", datatype=xsd:string)', 'Literal(\"C\", datatype=xsd:string)']" ;
+            sh:resultPath _:nb2ead76493784e328d29f95b7300f1deb4 ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:InConstraintComponent ;
+            sh:sourceShape bbl:C4_S4_2_P4_2_14_A4_92_SUB2_PROP1 ;
+            sh:value "E"^^xsd:string ],
+        [ a sh:ValidationResult ;
+            rdfs:label "Article 4.50(1)" ;
+            rdfs:comment "A closed space is in a fire compartment."@en,
+                "Een besloten ruimte ligt in een brandcompartiment."@nl ;
+            rdfs:seeAlso <https://wetten.overheid.nl/BWBR0041297/2024-08-01#Hoofdstuk4_Afdeling4.2_Paragraaf4.2.8_Artikel4.50_Lid1> ;
+            sh:focusNode inst:Space_781 ;
+            sh:resultMessage "Less than 1 values on inst:Space_781->ex:locatedInCompartment" ;
+            sh:resultPath ex:locatedInCompartment ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape bbl:C4_S4_2_P4_2_8_A4_50_SUB1_PROP1 ],
+        [ a sh:ValidationResult ;
+            rdfs:label "Article 4.92(2)" ;
+            rdfs:comment "Contrary to the first sub-article, a door, a window, a frame or a structural component to be equated with that is a fire class D, determined according to NEN-EN 13501-1."@en,
+                "In afwijking van het eerste lid voldoet een deur, een raam, een kozijn of een daaraan gelijk te stellen constructieonderdeel aan brandklasse D, bepaald volgens NEN-EN 13501-1."@nl ;
+            rdfs:seeAlso <https://wetten.overheid.nl/BWBR0041297/2024-08-01#Hoofdstuk4_Afdeling4.2_Paragraaf4.2.14_Artikel4.92_Lid2> ;
+            sh:focusNode inst:Door_9144 ;
+            sh:resultMessage "Value Literal(\"E\", datatype=xsd:string) not in list ['Literal(\"A1\", datatype=xsd:string)', 'Literal(\"B\", datatype=xsd:string)', 'Literal(\"D\", datatype=xsd:string)', 'Literal(\"A2\", datatype=xsd:string)', 'Literal(\"C\", datatype=xsd:string)']" ;
+            sh:resultPath _:nb2ead76493784e328d29f95b7300f1deb4 ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:InConstraintComponent ;
+            sh:sourceShape bbl:C4_S4_2_P4_2_14_A4_92_SUB2_PROP1 ;
+            sh:value "E"^^xsd:string ] .
+
+_:nb2ead76493784e328d29f95b7300f1deb9 rdf:first props:Fireclass ;
+    rdf:rest () .
+
+_:nb2ead76493784e328d29f95b7300f1deb4 rdf:first pset:Other ;
+    rdf:rest _:nb2ead76493784e328d29f95b7300f1deb9 .
+
