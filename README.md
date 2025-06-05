@@ -6,7 +6,7 @@ This repository contains the Proof of Concept implementation of a conceptualized
 
 The Proof of Concept consists of several separate Jupyter notebooks, implementing the system architecture in the figure below. The notebooks perform the following three tasks:
 1. The processing of regulatory information from natural language into SHACL shapes;
-2. The processing of building information from IFC models into RDF graphs;
+2. The processing of building information from IFC models into RDF graphs; and
 3. The generation of a compliance report based on the compliance of the building information in the RDF graphs with the regulatory information in the SHACL shapes.
 
 **EXPLAIN HOW THIS IS DONE USING LINKED DATA, ONTOLOGIES, ETC**
@@ -22,10 +22,10 @@ The modular system architecture allowed for a clear separation of processing ste
 
 The system uses the following input files:
 
-- `BBl_2024-8-1.txt` -- a plain-text version of Dutch building regulations from the [BBL]([https://wetten.overheid.nl/BWBR0041297/2024-08-01](https://wetten.overheid.nl/BWBR0041297/2024-08-01)), which is used as the regulatory information;
-- `use_case_correct.ifc` -- an IFC-SPF BIM model of a compliant building, used as a test case for SHACL validation;
-- `use_case_incorrect.ifc` -- an IFC-SPF BIM model of a non-compliant building, used to test detection of violations;
-- `custom_ontology.ttl`-- a custom ontology containing concepts related to fire safety to fill the gaps of the used external ontologies;
+- `BBl_2024-8-1.txt` -- a plain-text version of Dutch building regulations from the [BBL]([https://wetten.overheid.nl/BWBR0041297/2024-08-01](https://wetten.overheid.nl/BWBR0041297/2024-08-01)), which is used as the regulatory information.
+- `use_case_correct.ifc` -- an IFC-SPF BIM model of a compliant building, used as a test case for SHACL validation.
+- `use_case_incorrect.ifc` -- an IFC-SPF BIM model of a non-compliant building, used to test detection of violations.
+- `custom_ontology.ttl`-- a custom ontology containing concepts related to fire safety to fill the gaps of the used external ontologies.
 - `ontology_alignment.ttl`-- an RDF graph that links the concepts from various ontologies in order to align them.
 
 ## Libraries
