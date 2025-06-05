@@ -21,7 +21,6 @@ ifc:IfcBuildingStorey rdfs:subClassOf bot:Storey .
 ifc:IfcSpace rdfs:subClassOf bot:Space .
 ifc:IfcElement rdfs:subClassOf bot:Element .
 ifc:IfcMaterial rdfs:subClassOf ex:Material .
-# beo:Product rdfs:subClassOf bot:Element .
 ifc:IfcBuildingElement rdfs:subClassOf beo:BuiltElement .
 ifc:IfcDoor rdfs:subClassOf beo:Door . 
 ifc:IfcCurtainWall rdfs:subClassOf beo:CurtainWall .
