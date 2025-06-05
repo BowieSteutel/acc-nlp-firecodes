@@ -70,7 +70,7 @@ This notebook classifies regulations and filters them based on their classificat
 ### 1C. Information Extraction & Parsing
 This notebook contains the core NLP engine of the pipeline, which can be used for converting regulations into a machine-readable format.
 -   **Inputs**: 
-	- `output/BBL_hier_elements.csv` (hierarchical elements)
+	- `BBL_hier_elements.csv` (hierarchical elements)
 	- `BBL_subset_final_big.csv` (regulations)
 	- `BBL_subset_final_small.csv` (regulations)
 	- External ontologies ([ifcOWL](https://cramonell.github.io/ifc/ifcowl/IFC4X3_ADD2/actual/ontology.ttl), [BEO](https://cramonell.github.io/beo/actual/ontology.ttl), [PROPS](https://raw.githubusercontent.com/maximelefrancois86/props/refs/heads/master/IFC4-output.ttl), [UNIT](https://qudt.org/vocab/unit/))
