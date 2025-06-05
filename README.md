@@ -9,7 +9,6 @@ The Proof of Concept consists of several separate Jupyter notebooks, implementin
 2. The processing of building information from IFC models into RDF graphs; and
 3. The generation of a compliance report based on the compliance of the building information in the RDF graphs with the regulatory information in the SHACL shapes.
 
-**EXPLAIN HOW THIS IS DONE USING LINKED DATA, ONTOLOGIES, ETC**
 
 The modular system architecture allowed for a clear separation of processing steps and supported the intended pipeline from natural language input to rule checking. The Proof of Concept demonstrates that, even with relatively simple components, each stage of the ACC process can be independently built, tested, and improved. However, the results also show many limitations and underline the need for a more sophisticated system, as the current implementation of the framework is very rudimentary and insufficient for practical use.
 
@@ -17,9 +16,6 @@ The modular system architecture allowed for a clear separation of processing ste
 
 
 ## Inputs
-**EXPLAIN WHAT IS NEEDED FOR THIS PROCESS: REGULATORY INFORMATION, BUILDING INFORMATION, KNOWLEDGE BASES**
-
-
 The system uses the following input files:
 
 - `BBl_2024-8-1.txt` -- a plain-text version of Dutch building regulations from the [BBL]([https://wetten.overheid.nl/BWBR0041297/2024-08-01](https://wetten.overheid.nl/BWBR0041297/2024-08-01)), which is used as the regulatory information.
@@ -52,8 +48,8 @@ This notebook parses regulatory documents and isolates relevant regulations for 
 	-  `BBL_hier_elements.csv`  (containing information about all hierarchy elements)
 	-   `output/BBL_subset.csv`  (containing information about regulations remaining after primary data filtering)
 
-### 1B. Rule Classification
-This notebook classifies regulations and filters them based on their classifications.
+### 1B. Rule Classification 
+This notebook classifies regulations and filters them based on their classifications (see proposed classifications in thesis).
 - **Input**: `BBL_subset.csv` (regulations)
 -  **Steps**: 
 	- Rule classification (Clarity, Syntactic Complexity, Validation Complexity, Referral Complexity)
@@ -62,9 +58,6 @@ This notebook classifies regulations and filters them based on their classificat
 -   **Outputs**:  Annotated regulation databases with assigned classification tags:
 	- `BBL_subset_final_big.csv` (automatically selected subset based on classifications)
 	- `BBL_subset_final_small.csv` (handpicked smaller subset for effective demonstration)
-
-**SEE PROPOSED CLASSIFICATIONS IN THESIS**
-
 
 
 ### 1C. Information Extraction & Parsing
