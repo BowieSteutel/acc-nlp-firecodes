@@ -98,7 +98,8 @@ This notebook converts IFC building models to RDF graphs, with and without mater
 	- `use_case_incorrect.ifc` (incorrect use case model)
 	- `custom_ontology.ttl`(for materialization)
 	- `ontology_alignment.ttl` (for materialization)
-	- External ontologies [BEO](https://cramonell.github.io/beo/actual/ontology.ttl) & [UNIT](https://qudt.org/vocab/unit/) (for materialization)
+	- [BEO](https://cramonell.github.io/beo/actual/ontology.ttl) (for element class determination)
+ 	- [UNIT](https://qudt.org/vocab/unit/) (for unit normalization)
 -   **Steps**:
 	-  IFC conversion
     -   Materialization
@@ -119,10 +120,9 @@ This notebook runs SHACL validation of the building information against the regu
 	- `shapes.ttl` (regulatory information)
 	- `custom_ontology.ttl`(for demonstration of real-time inference)
 	- `ontology_alignment.ttl` (for demonstration of real-time inference)
-	- External ontologies [BEO](https://cramonell.github.io/beo/actual/ontology.ttl) & [UNIT](https://qudt.org/vocab/unit/) (for demonstration of real-time inference)
     
 -   **Steps**:
-	- Subset validation
+	- Subset compliance checking
 	- Method comparison & validation
 -   **Outputs**: Compliance reports:
 	-	`compliance_report_correct.ttl` (correct use case compliance report graph)
